@@ -1,0 +1,10 @@
+log write to /Users/helloword/Anmingyu/BigData/HadoopImoocExamples/log
+------ start deleting ------
+ input : /data/tale : true
+ output : /hdfs_api/output/ : true
+Output path exist
+------ start uploading tale ------
+file status : FileStatus{path=hdfs://hadoop-amy:9000/data/tale; isDirectory=false; length=726569; replication=3; blocksize=134217728; modification_time=1575812351972; access_time=1575812351526; owner=hadoop; group=supergroup; permission=rw-r--r--; isSymlink=false}
+------ mapping the tale ------
+------ map size : 10680------
+------ uploading result and log to hdfs------
