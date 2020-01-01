@@ -1,0 +1,16 @@
+import org.apache.spark.{SparkConf, SparkContext}
+
+object BroadCastValue {
+
+  def main(args: Array[String]): Unit = {
+    val conf = new SparkConf().setAppName("BroadCastValue1").setMaster("local[1]")
+    val sc = new SparkContext(conf)
+    val broads = sc.broadcast(3)
+    val lists = List(1,2,3,4,5)
+    val listRDD = sc.parallelize(lists)
+    val results = listRDD.map(x => x * broads.value)
+    results.foreach(x => println("The result is : " + x))
+    sc.stop()
+  }
+
+}
